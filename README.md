@@ -4,4 +4,4 @@ A responsive web app template for a banking organization. This project is built 
 
 ## Getting Started
 
-Visit: https://ultraapp.vercel.app
+Visit: https://bankistapp.vercel.app
