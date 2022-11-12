@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .modal__form {
+    @apply my-0 mx-12 grid grid-cols-1fr-2fr items-center gap-10;
+
+    label {
+      @apply text-xl lg:text-2xl font-semibold;
+    }
+
+    input {
+      @apply text-2xl py-4 px-6 border border-solid border-[#ddd] rounded-lg;
+    }
+
+    button {
+      @apply col-1/span2 justify-self-center mt-4;
+    }
+  }
+}

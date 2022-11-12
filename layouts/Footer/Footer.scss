@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .footer {
+    @apply py-40 px-6 lg:px-12 h-screen bg-primary-darker flex flex-col-reverse lg:flex-col justify-start items-center;
+
+    &__nav {
+      @apply grid grid-cols-2 my-20 mx-0 gap-y-8 gap-x-32;
+    }
+
+    &__item {
+      @apply font-semibold text-center;
+    }
+
+    &__link {
+      @apply text-2xl text-gray-200;
+    }
+
+    &__link:link,
+    &__link:visited {
+      @apply font-semibold transition hover:scale-105 hover:text-primary-darkMode;
+    }
+
+    &__logo {
+      @apply block my-0 mx-auto lg:mb-20 items-center justify-center;
+    }
+
+    &__copyright {
+      @apply text-2xl text-primary-darkMode text-center font-semibold mb-10 lg:mb-0;
+    }
+  }
+}

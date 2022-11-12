@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  #header {
+    .app__wrapper {
+      @apply pt-20 lg:pt-0 justify-start lg:justify-center;
+
+      .copyright {
+        @apply hidden;
+      }
+    }
+  }
+
+  .header__title {
+    @apply flex flex-col justify-start items-center lg:flex-row lg:justify-center lg:items-start mx-12 lg:mx-24;
+
+    .title--info {
+      @apply flex flex-col gap-8 lg:gap-16 mb-4;
+
+      h1 {
+        @apply text-5xl lg:text-[5.5rem] leading-snug font-bold tracking-wider;
+
+        span {
+          @apply inline-block -z-[10] h-full bg-gradient-to-tl from-gradient-primary-one to-gradient-primary-two mx-2 p-2 bg-opacity-20;
+        }
+
+        .highlight {
+          @apply inline-block content-[''] h-full -z-[1] -skew-x-[15deg] scale-y-[1.07] scale-x-[1.05] bg-gradient-to-tl from-gradient-primary-one to-gradient-primary-two mx-4 p-2 bg-opacity-50;
+        }
+      }
+
+      h4 {
+        @apply text-2xl lg:text-4xl font-semibold text-center lg:text-start;
+      }
+
+      div {
+        @apply flex items-center justify-start gap-4 border-b border-solid border-inherit pb-1 transition-all duration-300 animate-bounce w-fit;
+
+        svg {
+          @apply h-full text-primary;
+        }
+      }
+    }
+
+    img {
+      @apply lg:w-[40%] lg:h-[25%] lg:-translate-y-24 lg:col-2/3 lg:row-1/span4;
+    }
+  }
+}

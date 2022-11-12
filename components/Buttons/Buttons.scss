@@ -1,0 +1,53 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer components {
+  .btn {
+    @apply outline-none border-none cursor-pointer whitespace-nowrap transition-all duration-200 ease-in-out font-semibold;
+  }
+
+  .btn--primary {
+    @apply bg-primary text-[#222] border-2 border-solid border-white;
+  }
+
+  .btn--secondary {
+    @apply bg-secondary text-primary border-2 border-solid border-[#69E6A6] hover:bg-white hover:border-white hover:text-primary;
+  }
+
+  .btn--outline {
+    @apply bg-transparent text-white border border-solid border-white hover:bg-white hover:text-primary;
+  }
+
+  .btn--outline-inverse {
+    @apply bg-transparent text-primary border border-solid border-primary hover:bg-primary hover:text-white;
+  }
+
+  .btn--medium {
+    @apply py-1 px-5 text-sm lg:py-2 lg:px-10 lg:text-lg rounded-3xl;
+  }
+
+  .btn--large {
+    @apply py-3 px-7 text-base lg:py-4 lg:px-10 lg:text-2xl rounded-[3rem];
+  }
+
+  .btn--mobile {
+    @apply w-full text-center rounded-3xl no-underline text-2xl bg-transparent text-white py-3.5 px-16 border border-solid border-white transition-all duration-300 ease-out hover:bg-white hover:text-primary uppercase;
+  }
+
+  .btn--wide {
+    @apply py-[6px] px-8 text-base lg:py-3 lg:px-16 lg:text-xl rounded-3xl;
+  }
+
+  .primary {
+    @apply bg-primary text-white border-2 border-solid border-primary hover:bg-transparent hover:border-primary hover:text-[#222] rounded-[56px];
+  }
+
+  .secondary {
+    @apply bg-secondary text-white border-2 border-solid border-[#69E6A6] hover:bg-white hover:border-white hover:text-primary;
+  }
+
+  .white {
+    @apply bg-white text-primary hover:text-white border-2 border-solid border-white hover:bg-secondary hover:border-secondary;
+  }
+}

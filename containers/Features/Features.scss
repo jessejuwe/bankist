@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  #features {
+    .app__wrapper {
+      @apply p-0;
+
+      .copyright {
+        @apply hidden;
+      }
+    }
+  }
+
+  .app__features {
+    @apply flex flex-col;
+  }
+}

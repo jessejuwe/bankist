@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  #testimonials {
+    .app__wrapper {
+      @apply p-0;
+
+      .copyright,
+      .app__social {
+        @apply hidden;
+      }
+    }
+  }
+
+  .slider {
+    @apply max-w-xl lg:max-w-[100rem] h-full lg:h-96 my-0 mx-auto relative overflow-hidden;
+  }
+}

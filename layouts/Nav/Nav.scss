@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav {
+    @apply flex justify-between items-center h-36 w-full py-0 px-12 lg:px-24 z-50;
+
+    &__logo {
+      @apply h-14 w-44 lg:h-[4.5rem] lg:w-60 transition-all duration-300;
+    }
+
+    &__mobile {
+      @apply flex lg:hidden p-2 rounded-full relative justify-center items-center bg-primary z-30;
+
+      svg {
+        @apply text-white cursor-pointer font-semibold text-2xl;
+      }
+
+      div {
+        @apply fixed inset-y-0 right-0 z-[5] p-4 w-full h-screen flex justify-end items-end flex-col bg-primary shadow-lg shadow-black/50;
+
+        svg {
+          @apply text-gray-200 hover:text-white cursor-pointer font-semibold text-4xl my-10 mx-10 transition;
+        }
+
+        ul {
+          @apply m-0 p-0 h-full w-full flex justify-start flex-col;
+
+          li {
+            @apply m-4 text-center;
+
+            .nav__link {
+              @apply font-semibold text-2xl uppercase text-gray-200 hover:text-white hover:scale-105 transition ease-in;
+            }
+          }
+        }
+      }
+    }
+
+    &__links {
+      @apply hidden lg:flex items-center gap-16;
+    }
+
+    &__link:link,
+    &__link:visited {
+      @apply text-2xl font-semibold text-inherit block transition hover:scale-105 hover:text-primary;
+    }
+  }
+
+  .nav.sticky {
+    @apply fixed bg-white/95 transition duration-500;
+  }
+}

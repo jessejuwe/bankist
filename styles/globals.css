@@ -1,26 +1,74 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Open+Sans&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import '../scss/Home.scss';
 
-* {
-  box-sizing: border-box;
-}
+@import '../components/Buttons/Buttons.scss';
+@import '../components/Card/Card.scss';
+@import '../components/Modal/Modal.scss';
+@import '../components/Spinner/Spinner.scss';
+@import '../components/Carousel/Carousel.scss';
+@import '../components/Form/Form.scss';
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@import '../containers/Features/Features.scss';
+@import '../containers/Header/Header.scss';
+@import '../containers/OpenAccount/OpenAccount.scss';
+@import '../containers/Operations/Operations.scss';
+@import '../containers/Section/Section.scss';
+@import '../containers/Testimonials/Testimonials.scss';
+
+@import '../layouts/Footer/Footer.scss';
+@import '../layouts/Nav/Nav.scss';
+@import '../layouts/NavWrapper/NavWrapper.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 94 197 118;
+    --color-secondary: 255 203 3;
+    --color-tertiary: 255 88 95;
+    --color-primary-darker: 75 187 125;
+    --color-secondary-darker: 255 187 0;
+    --color-tertiary-darker: 253 66 75;
+    --gradient-primary-one: 57 179 133;
+    --gradient-primary-two: 155 225 93;
+    --gradient-secondary-one: 255 176 3;
+    --gradient-secondary-two: 255 203 3;
+
+    --color-darkMode: 10 38 64;
+
+    --swiper-navigation-color: #4bbb7d;
+    --swiper-pagination-color: #4bbb7d;
+
+    /* opacity - primary(0.23), secondary(0.19), tertiary(0.18) */
+
+    $bp-large: 78.15em;
+    $bp-medium: 61.25em;
+    $bp-small: 37.5em;
+    $bp-smallest: 31.25em;
   }
+
+  html {
+    @apply box-border text-[62.5%];
+  }
+
   body {
-    color: white;
-    background: black;
+    @apply min-h-screen;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  * {
+    @apply p-0 m-0 scroll-smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
   }
 }

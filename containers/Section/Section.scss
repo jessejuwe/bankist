@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .home__section {
+    @apply text-white py-20 px-0 w-full;
+
+    .row {
+      @apply flex -mx-[15px] -mb-[15px] flex-wrap;
+    }
+
+    &-row {
+      @apply items-center justify-center lg:justify-between;
+
+      .col {
+        @apply mb-0 lg:mb-[15px] px-[15px];
+
+        .text-wrapper {
+          @apply flex flex-col items-center lg:items-start max-w-[540px] pt-0 pb-8 lg:pb-[60px] m-auto lg:m-[initial] text-center lg:text-start;
+
+          .icon {
+            @apply bg-primary/[0.23] h-[5.5rem] w-[5.5rem] rounded-full mb-8;
+
+            svg {
+              @apply text-primary w-10 h-10;
+            }
+          }
+
+          .heading {
+            @apply text-5xl mb-6 font-semibold text-white;
+          }
+
+          .subtitle {
+            @apply max-w-[440px] mb-9 lg:mb-4 text-3xl m-auto lg:m-[initial];
+          }
+
+          .dark {
+            @apply text-primary-darkMode;
+          }
+        }
+
+        .img-wrapper {
+          @apply max-w-[555px] m-auto md:m-[initial];
+
+          .img {
+            @apply max-w-[95%] my-0 mr-0 ml-[10px] pr-0 border-0 align-middle inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .darkBg {
+    @apply bg-primary-darkMode rounded-lg;
+  }
+
+  .containers {
+    @apply px-[30px] md:px-[50px];
+  }
+}

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  #open-account {
+    .app__wrapper {
+      @apply p-0;
+
+      .copyright,
+      .app__social {
+        @apply hidden;
+      }
+    }
+  }
+
+  .section--sign-up {
+    @apply bg-primary-darkMode lg:rounded-lg border-t-0 border-b-[1px] border-solid border-primary-darkMode text-center py-20 px-2 lg:px-12 lg:py-40;
+
+    .section__title {
+      @apply mb-8;
+
+      .section__header {
+        @apply text-white text-center;
+      }
+    }
+
+    button {
+      @apply text-2xl lg:text-3xl py-4 px-10 lg:py-8 lg:px-20;
+    }
+  }
+}

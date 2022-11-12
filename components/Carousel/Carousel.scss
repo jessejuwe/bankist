@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .swiper {
+    @apply w-full rounded-lg bg-primary/[0.23];
+  }
+
+  .slide {
+    @apply w-[full] h-full flex items-center justify-center transition py-16;
+
+    .testimonial {
+      @apply w-[65%] relative;
+
+      &__header {
+        @apply text-2xl lg:text-4xl font-semibold mb-6 text-center lg:text-start;
+      }
+
+      &__text {
+        @apply text-xl lg:text-2xl mb-7 lg:mb-14 text-[#666] text-center lg:text-start;
+      }
+
+      &__author {
+        @apply lg:ml-12 font-normal flex flex-col lg:flex-row items-center justify-start gap-10;
+
+        .testimonial__photo {
+          @apply w-[6.5rem] rounded-full;
+        }
+
+        .testimonial__info {
+          @apply flex flex-col gap-2 lg:gap-4 items-center justify-center lg:items-start lg:justify-start;
+
+          .testimonial__name {
+            @apply text-[1.8rem] font-semibold m-0;
+          }
+
+          .testimonial__location {
+            @apply text-2xl;
+          }
+        }
+      }
+    }
+
+    .testimonial::before {
+      @apply content-['\201C'] absolute -top-4 lg:-top-[5.7rem] -left-12 lg:-left-[6.8rem] leading-none text-8xl lg:text-[20rem] text-primary -z-[1];
+    }
+  }
+}
