@@ -4,4 +4,4 @@ A responsive web app template for a banking organization. This project is built 
 
 ## Getting Started
 
-Visit: https://bankistapp.vercel.app
+Visit: https://bankists.vercel.app
